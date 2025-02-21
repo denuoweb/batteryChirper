@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- This TextView shows the current battery status update -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Battery status will appear here."
+            android:textSize="18sp"
+            android:padding="8dp" />
+
+        <!-- The rest of your configuration fields wrapped in TextInputLayout or plain EditText -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilGeneralThreshold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="General Threshold (%/min, e.g., 5.0)">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etGeneralThreshold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCriticalThreshold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Critical Threshold (%/min, e.g., 7.0)">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCriticalThreshold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCooldown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cooldown (ms, e.g., 60000)">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCooldown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCriticalLower"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Critical Range Lower (%) (e.g., 15.0)">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCriticalLower"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCriticalUpper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Critical Range Upper (%) (e.g., 60.0)">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCriticalUpper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilChirpDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Chirp Duration (ms, e.g., 10000)">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etChirpDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Monitoring" />
+
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stop Monitoring" />
+
+        <Button
+            android:id="@+id/btnTestChirp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Chirp" />
+
+    </LinearLayout>
+</ScrollView>
+

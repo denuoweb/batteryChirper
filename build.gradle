@@ -1,0 +1,18 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Updated to a version compatible with Gradle 8.9
+        classpath 'com.android.tools.build:gradle:8.8.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.10" // Add this line
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
